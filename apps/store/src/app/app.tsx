@@ -1,5 +1,6 @@
 import styles from './app.module.scss';
 import { getAllGames } from '../fake-api';
+import { Header } from '@bg-hoard/store/ui-shared';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,6 +10,8 @@ import Typography from '@material-ui/core/Typography';
 
 export const App = () => {
   return (
+    <>
+    <Header title="Board Game Hoard" />
     <div className={styles.container}>
       <div className={styles['games-layout']}>
         {getAllGames().map((x) => (
@@ -40,6 +43,7 @@ export const App = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
